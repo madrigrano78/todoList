@@ -9,6 +9,8 @@ declare module "styled-components" {
       darkChecked: string;
       lightChecked: string;
       textColor: string;
+      textMode: string;
+      imageHeader: string;
     };
   }
 }

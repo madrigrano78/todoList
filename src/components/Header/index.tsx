@@ -1,5 +1,11 @@
 import { ThemeContext } from "styled-components";
-import { Container, Logo, TodoContent } from "./style";
+import {
+  Container,
+  Logo,
+  NameLight,
+  SwitchContent,
+  TodoContent,
+} from "./style";
 import ReactSwitch from "react-switch";
 import { useContext } from "react";
 
@@ -15,17 +21,20 @@ export function Header({ onChangeTheme }: Props) {
       <Container>
         <TodoContent>
           <Logo />
-          <ReactSwitch
-            onChange={onChangeTheme}
-            checked={name === "light"}
-            width={52}
-            height={32}
-            checkedIcon={false}
-            uncheckedIcon={false}
-            handleDiameter={24}
-            onColor={colors.lightChecked}
-            offColor={colors.darkChecked}
-          />
+          <SwitchContent>
+            <NameLight>Light Mode</NameLight>
+            <ReactSwitch
+              onChange={onChangeTheme}
+              checked={name === "light"}
+              width={52}
+              height={32}
+              checkedIcon={false}
+              uncheckedIcon={false}
+              handleDiameter={24}
+              onColor={colors.lightChecked}
+              offColor={colors.darkChecked}
+            />
+          </SwitchContent>
         </TodoContent>
       </Container>
     </>

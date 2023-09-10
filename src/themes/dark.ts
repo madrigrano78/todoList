@@ -1,4 +1,4 @@
-// import DarkLogo from "../assets/images/masterMobilityDark.svg";
+import DarkLogo from "../assets/images/masterMobilityDark.svg";
 
 const darkTheme = {
   name: "dark",
@@ -7,6 +7,8 @@ const darkTheme = {
     secondary: "#1A1A1A",
     darkChecked: "#E6E0E9",
     textColor: "#4EA8DE",
+    textMode: "#626262",
+    imageHeader: DarkLogo,
   },
 };
 export default darkTheme;

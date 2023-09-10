@@ -5,6 +5,8 @@ import { useState } from "react";
 
 import light from "./themes/light";
 import dark from "./themes/dark";
+// import { ModalToDo } from "./components/Modal";
+import { Body } from "./components/Body";
 
 function App() {
   const [theme, setTheme] = useState(light);
@@ -17,6 +19,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <Header onChangeTheme={onChangeTheme} />
+        <Body />
       </ThemeProvider>
     </>
   );
