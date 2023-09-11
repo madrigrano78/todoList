@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 // export const Content = styled.div`
 //   display: flex;
@@ -21,9 +21,11 @@ export const ButtonCreate = styled.button`
   border: none;
   font-weight: bold;
   cursor: pointer;
-`;
+  font-size: 14px;
+  position: absolute;
+`
 
-export const ModalContainer = styled.div``;
+export const ModalContainer = styled.div``
 
 export const TitleModal = styled.h1`
   display: flex;
@@ -31,13 +33,13 @@ export const TitleModal = styled.h1`
   justify-content: center;
   color: white;
   padding-bottom: 2rem;
-`;
+`
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: end;
   margin: 10px;
-`;
+`
 
 export const ButtonCreateTask = styled.button`
   width: 6.5rem;
@@ -49,7 +51,7 @@ export const ButtonCreateTask = styled.button`
   border: none;
   margin-right: 16px;
   cursor: pointer;
-`;
+`
 
 export const ButtonCloseModal = styled.button`
   display: flex;
@@ -63,14 +65,14 @@ export const ButtonCloseModal = styled.button`
   background-color: red;
   border: none;
   cursor: pointer;
-`;
+`
 
 export const ContainerInput = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 16px;
-`;
+`
 
 export const TitleInput = styled.input`
   width: 28.8rem;
@@ -78,7 +80,9 @@ export const TitleInput = styled.input`
   border: 1px;
   border-radius: 8px;
   padding: 16px;
-`;
+  font-size: 20px;
+  font-weight: bold;
+`
 
 export const DescriptionInput = styled.textarea`
   width: 28.8rem;
@@ -87,4 +91,20 @@ export const DescriptionInput = styled.textarea`
   border-radius: 8px;
   padding: 16px;
   margin-top: 10px;
-`;
+  font-size: 20px;
+`
+
+// export const ButtonEditTask = styled.button`
+//   cursor: pointer;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 6.5rem;
+//   height: 2.5rem;
+//   border-radius: 8px;
+//   font-weight: bold;
+//   color: white;
+//   background-color: ${(props) => props.theme.colors.textColor};
+//   border: none;
+//   cursor: pointer;
+// `;

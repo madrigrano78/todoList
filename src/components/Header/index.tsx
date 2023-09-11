@@ -1,4 +1,4 @@
-import { ThemeContext } from "styled-components";
+import { useTheme } from "styled-components";
 import {
   Container,
   Logo,
@@ -7,14 +7,13 @@ import {
   TodoContent,
 } from "./style";
 import ReactSwitch from "react-switch";
-import { useContext } from "react";
 
 type Props = {
   onChangeTheme: () => void;
 };
 
 export function Header({ onChangeTheme }: Props) {
-  const { name, colors } = useContext(ThemeContext);
+  const { name, colors } = useTheme();
 
   return (
     <>

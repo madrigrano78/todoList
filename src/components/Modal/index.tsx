@@ -1,17 +1,7 @@
 import { useState } from "react";
 import { IoMdAddCircleOutline } from "react-icons/io";
 import Modal from "react-modal";
-import {
-  ButtonCloseModal,
-  ButtonCreate,
-  ButtonCreateTask,
-  ButtonContainer,
-  ContainerInput,
-  DescriptionInput,
-  ModalContainer,
-  TitleInput,
-  TitleModal,
-} from "./style";
+import * as S from "./style";
 
 const customStyles = {
   content: {
@@ -54,42 +44,44 @@ export function ModalToDo({ onCreate }: Props) {
   return (
     <>
       {/* <Content> */}
-      <ButtonCreate onClick={openModal}>
-        Criar {<IoMdAddCircleOutline />}
-      </ButtonCreate>
+      <S.ButtonCreate onClick={openModal}>
+        Criar {<IoMdAddCircleOutline size={20} />}
+      </S.ButtonCreate>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <ModalContainer>
-          <TitleModal>Digite sua Tarefa</TitleModal>
+        <S.ModalContainer>
+          <S.TitleModal>Digite sua Tarefa</S.TitleModal>
           <form>
-            <ContainerInput>
-              <TitleInput
+            <S.ContainerInput>
+              <S.TitleInput
                 type="text"
                 placeholder="Título"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
               />
-              <DescriptionInput
+              <S.DescriptionInput
                 placeholder="Descrição"
                 value={inputTextArea}
                 onChange={(e) => setInputTextArea(e.target.value)}
               />
-            </ContainerInput>
+            </S.ContainerInput>
           </form>
-          <ButtonContainer>
-            <ButtonCreateTask
+          <S.ButtonContainer>
+            <S.ButtonCreateTask
               onClick={() => {
-                onCreate(inputText);
+                onCreate(inputText, inputTextArea);
               }}
             >
               Criar
-            </ButtonCreateTask>
-            <ButtonCloseModal onClick={closeModal}>Cancelar</ButtonCloseModal>
-          </ButtonContainer>
-        </ModalContainer>
+            </S.ButtonCreateTask>
+            <S.ButtonCloseModal onClick={closeModal}>
+              Cancelar
+            </S.ButtonCloseModal>
+          </S.ButtonContainer>
+        </S.ModalContainer>
       </Modal>
       {/* </Content> */}
     </>
